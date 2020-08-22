@@ -13,7 +13,9 @@ add_action('wp_enqueue_scripts', 'enqueue_particles');
 
 //HTML classe "ripples" for section block html
 function enqueue_ripples() {
-	wp_enqueue_script('ripples-cdn', '//cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js');
+    wp_enqueue_script('ripples-cdn', '//cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js', array('ripples-cdn');
     wp_enqueue_script('ripples',  get_stylesheet_directory_uri() .'/js/ripples.js');
 }
 add_action('wp_enqueue_scripts', 'enqueue_ripples');
+
+
